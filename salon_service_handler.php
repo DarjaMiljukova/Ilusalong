@@ -109,11 +109,11 @@ if (isset($_GET['sort']) && $_GET['sort'] === 'hind') {
 
 <h2>Lisage uus teenus</h2>
 <form method="post">
-    <label>Protseduur: <input type="text" name="protseduur" required placeholder="Maniküür" pattern="[A-Za-z\s]+" title="Vaid tähed ja tühikud lubatud"></label><br>
-    <label>Kliendi nimi: <input type="text" name="kliendinimi" required placeholder="Anna Filkit" pattern="[A-Za-z\s]+" title="Vaid tähed ja tühikud lubatud"></label><br>
-    <label>Telefoni number: <input type="text" name="telefoninr" required placeholder="58456721" pattern="\d{8}" title="Sisestage 8-kohaline number"></label><br>
-    <label>Aeg: <input type="time" name="aeg" required placeholder="10:15"></label><br> <!-- Используем type="time" -->
-    <label>Spetsialist: <input type="text" name="spetsialist" required placeholder="Miiu Killo" pattern="[A-Za-z\s]+" title="Vaid tähed ja tühikud lubatud"></label><br>
+    <label>Protseduur: <input type="text" name="protseduur" required placeholder="Maniküür"></label><br>
+    <label>Kliendi nimi: <input type="text" name="kliendinimi" required placeholder="Anna Filkit" ></label><br>
+    <label>Telefoni number: <input type="text" name="telefoninr" required placeholder="58456721" ></label><br>
+    <label>Aeg: <input type="time" name="aeg" required placeholder="10:15"></label><br>
+    <label>Spetsialist: <input type="text" name="spetsialist" required placeholder="Miiu Killo" ></label><br>
     <label>Hind: <input type="number" name="hind" required placeholder="34" min="0" step="0.01"></label><br>
     <button type="submit" name="addService">Lisage teenus</button>
 </form>

@@ -1,0 +1,50 @@
+[
+    {
+        "protseduur": "Juustelõikus",
+        "kliendinimi": "Emma Lanberg",
+        "telefoninr": "+37252410473",
+        "aeg": "10:00",
+        "spetsialist": "Lauri Märt",
+        "hind": "25€"
+    },
+    {
+        "protseduur": "Maniküür",
+        "kliendinimi": "Kristen Kotka",
+        "telefoninr": "+37250948181",
+        "aeg": "12:00",
+        "spetsialist": "Triinu Mitt",
+        "hind": "30€"
+    },
+    {
+        "protseduur": "Massaaž",
+        "kliendinimi": "Arti Allik",
+        "telefoninr": "+37254087711",
+        "aeg": "18:00",
+        "spetsialist": "Anton Harma",
+        "hind": "40€"
+    },
+    {
+        "protseduur": "Pediküür",
+        "kliendinimi": "Elle Soosaar",
+        "telefoninr": "+37258091710",
+        "aeg": "10:00",
+        "spetsialist": "Triinu Mitt",
+        "hind": "35€"
+    },
+    {
+        "protseduur": "Ripsmepikendused",
+        "kliendinimi": "Karoliine Sokk",
+        "telefoninr": "+37256679616",
+        "aeg": "17:30",
+        "spetsialist": "Jana Valjas",
+        "hind": "35€"
+    },
+    {
+        "protseduur": "Meik",
+        "kliendinimi": "Marika Lepp",
+        "telefoninr": "+37255830553",
+        "aeg": "18:00",
+        "spetsialist": "Eliisa Mitt",
+        "hind": "52€"
+    }
+]

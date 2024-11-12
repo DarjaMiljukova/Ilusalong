@@ -1,8 +1,6 @@
 <?php
 
 $xml = simplexml_load_file('broneeringud.xml');
-
-// Преобразуем XML в массив для удобства и затем закодируем его в JSON
 $data = [];
 
 foreach ($xml->broneering->teenus as $service) {

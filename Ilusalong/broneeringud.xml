@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<salong>
+	<broneering>
+		<teenus>
+			<protseduur>Juustelõikus</protseduur>
+			<kliendinimi>Emma Lanberg</kliendinimi>
+			<telefoninr>+37252410473</telefoninr>
+			<aeg>10:00</aeg>
+			<spetsialist>Lauri Märt</spetsialist>
+			<hind>25€</hind>
+		</teenus>
+		<teenus>
+			<protseduur>Maniküür</protseduur>
+			<kliendinimi>Kristen Kotka</kliendinimi>
+			<telefoninr>+37250948181</telefoninr>
+			<aeg>12:00</aeg>
+			<spetsialist>Triinu Mitt</spetsialist>
+			<hind>30€</hind>
+		</teenus>
+		<teenus>
+			<protseduur>Massaaž</protseduur>
+			<kliendinimi>Arti Allik</kliendinimi>
+			<telefoninr>+37254087711</telefoninr>
+			<aeg>18:00</aeg>
+			<spetsialist>Anton Harma</spetsialist>
+			<hind>40€</hind>
+		</teenus>
+		<teenus>
+			<protseduur>Pediküür</protseduur>
+			<kliendinimi>Elle Soosaar</kliendinimi>
+			<telefoninr>+37258091710</telefoninr>
+			<aeg>10:00</aeg>
+			<spetsialist>Triinu Mitt</spetsialist>
+			<hind>35€</hind>
+		</teenus>
+		<teenus>
+			<protseduur>Ripsmepikendused</protseduur>
+			<kliendinimi>Karoliine Sokk</kliendinimi>
+			<telefoninr>+37256679616</telefoninr>
+			<aeg>17:30</aeg>
+			<spetsialist>Jana Valjas</spetsialist>
+			<hind>35€</hind>
+		</teenus>
+		<teenus>
+			<protseduur>Meik</protseduur>
+			<kliendinimi>Marika Lepp</kliendinimi>
+			<telefoninr>+37255830553</telefoninr>
+			<aeg>18:00</aeg>
+			<spetsialist>Eliisa Mitt</spetsialist>
+			<hind>52€</hind>
+		</teenus>
+	</broneering>
+</salong>

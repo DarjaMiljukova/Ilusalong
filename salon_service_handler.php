@@ -18,10 +18,18 @@ function loadXmlToArray($xmlFile) {
     return $data;
 }
 
-
 function addServiceToJson($jsonFile, $newService) {
+
+    if (strpos($newService['telefoninr'], '+372') !== 0) {
+        $newService['telefoninr'] = '+372' . $newService['telefoninr'];
+    }
+
+    if (strpos($newService['hind'], '€') === false) {
+        $newService['hind'] .= ' €';
+    }
+
+
     $data = json_decode(file_get_contents($jsonFile), true);
-    $newService['hind'] .= ' €';
     $data[] = $newService;
     file_put_contents($jsonFile, json_encode($data, JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT));
 }
@@ -70,7 +78,7 @@ if (isset($_GET['sort']) && $_GET['sort'] === 'hind') {
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<h2>Teenuste loend</h2>
+<h2>Celestial Touch</h2>
 
 <form method="get">
     <label for="searchSpecialist">Otsi spetsialisti järgi:</label>
@@ -85,7 +93,7 @@ if (isset($_GET['sort']) && $_GET['sort'] === 'hind') {
         <th>Telefoni number</th>
         <th>Aeg</th>
         <th>Spetsialist</th>
-        <th><a href="?sort=hind&order=<?= $order ?>" class="text-none">Hind</a></th>
+        <th><a href="?sort=hind&order=<?= $order ?>" class="text-none">Hind <?= $order === 'asc' ? '↑' : '↓' ?></a></th>
     </tr>
     <?php foreach ($data as $service): ?>
         <tr>
@@ -101,17 +109,17 @@ if (isset($_GET['sort']) && $_GET['sort'] === 'hind') {
 
 <h2>Lisage uus teenus</h2>
 <form method="post">
-    <label>Protseduur: <input type="text" name="protseduur" required placeholder="Maniküür"></label><br>
-    <label>Kliendi nimi: <input type="text" name="kliendinimi" required placeholder="Anna Filkit"></label><br>
-    <label>Telefoni number: <input type="text" name="telefoninr" required placeholder="+37258456721"></label><br>
-    <label>Aeg: <input type="text" name="aeg" required placeholder="10:15"></label><br>
-    <label>Spetsialist: <input type="text" name="spetsialist" required placeholder="Miiu Killo"></label><br>
-    <label>Hind: <input type="text" name="hind" required placeholder="34"></label><br>
+    <label>Protseduur: <input type="text" name="protseduur" required placeholder="Maniküür" pattern="[A-Za-z\s]+" title="Vaid tähed ja tühikud lubatud"></label><br>
+    <label>Kliendi nimi: <input type="text" name="kliendinimi" required placeholder="Anna Filkit" pattern="[A-Za-z\s]+" title="Vaid tähed ja tühikud lubatud"></label><br>
+    <label>Telefoni number: <input type="text" name="telefoninr" required placeholder="58456721" pattern="\d{8}" title="Sisestage 8-kohaline number"></label><br>
+    <label>Aeg: <input type="time" name="aeg" required placeholder="10:15"></label><br> <!-- Используем type="time" -->
+    <label>Spetsialist: <input type="text" name="spetsialist" required placeholder="Miiu Killo" pattern="[A-Za-z\s]+" title="Vaid tähed ja tühikud lubatud"></label><br>
+    <label>Hind: <input type="number" name="hind" required placeholder="34" min="0" step="0.01"></label><br>
     <button type="submit" name="addService">Lisage teenus</button>
 </form>
 
 <h2>Vaata JSON ja XML failid</h2>
 <p class="links"><a href="<?= $jsonFile ?>" target="_blank">JSON fail</a></p>
-<p class="links"><a href="<?= $xmlFile ?>" target="_blank">XML <fail></fail></a></p>
+<p class="links"><a href="<?= $xmlFile ?>" target="_blank">XML fail</a></p>
 </body>
 </html>
